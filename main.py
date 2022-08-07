@@ -64,3 +64,15 @@ mod.fit(x_train_new, y_train, epochs=5, validation_split=0.25)  # 25 percent of 
 test_loss, test_acc = mod.evaluate(x_test_new, y_test)
 print("Loss on Test: " + str(test_loss))
 print("Model Accuracy: " + str(test_acc))
+
+
+predictions = mod.predict([x_test_new])
+#Uncomment this to test on a specific image in the dataset
+
+'''
+plt.imshow(x_test[0])                     Use this to bring up an actual image in the dataset
+plt.show()
+print(np.argmax(predictions[0]))          This will print out the prediction that the neural network's prediction'''
+
+
+   
