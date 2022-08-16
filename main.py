@@ -16,7 +16,7 @@ plt.show()
 print(x_train[0])                      Uncomment to show 28X28 grayscale array of pixels'''
 
 x_train = tf.keras.utils.normalize(x_train, axis=1)
-x_test = tf.keras.utils.normalize(x_train, axis=1)
+x_test = tf.keras.utils.normalize(x_test, axis=1)
 
 SQUARE_IMG_SIZE = 28
 x_train_new = np.array(x_train).reshape(-1, SQUARE_IMG_SIZE, SQUARE_IMG_SIZE, 1)
